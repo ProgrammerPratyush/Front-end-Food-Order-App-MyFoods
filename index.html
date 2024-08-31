@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Header/Header.css">
+    <link rel="stylesheet" href="ExploreMenu.css">
+    <link rel="stylesheet" href="FoodDisplay/FoodDisplay.css">
+    <link rel="stylesheet" href="AppDownload/AppDownload.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="index.html" id="logo-link"><img src="/src/images/restaurant-logo.png" alt="" class="logo" id="logo"/></a>
+        <ul class="navbar-menu">
+            <li><a href="/" class="menu-item active" data-menu="home">Home</a></li>
+            <li><a href="#explore-menu" class="menu-item" data-menu="menu">Menu</a></li>
+            <li><a href="#app-download" class="menu-item" data-menu="mobile-app">Mobile-App</a></li>
+            <li><a href="#footer" class="menu-item" data-menu="contact-us">Contact Us</a></li>
+        </ul>
+        
+        <div class="navbar-right">
+            <img src="/src/images/search_icon.png" alt="" id="search-icon"/>
+            <div class="navbar-search-icon">
+                <a href="./src/pages/Cart/Cart.html"><img src="/src/images/basket_icon.png" alt="" id="basket-icon"/></a>
+                <div id="cart-dot" class="dot"></div>
+            </div>
+            <button id="sign-in-button" onclick="window.location.href='/src/components/LoginPopup/LoginPopup.html'">Sign in</button>
+            <div class="navbar-profile" id="profile-section" style="display: none;">
+                <img src="/src/" alt="" id="profile-icon"/>
+                <ul class="nav-profile-dropdown" id="profile-dropdown">
+                    <li><a href="/myorders"><img src="/src/images/bag_icon.png" alt="" id="bag-icon"/><p>Orders</p></a></li>
+                    <hr />
+                    <li id="logout"><img src="/src/images/logout_icon.png" alt="" id="logout-icon"/><p>Logout</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <div id="home">
+        <div class="header">
+            <div class="header-contents">
+                <h2>Order your favourite food here</h2>
+                <p>Browse a different menu highlighting a scrumptious cluster of dishes created with the best fixings and culinary mastery. Our central goal is to fulfill your desires and lift your feasting experience, each heavenly dinner in turn.</p>
+                <button id="view-menu-button">View Menu</button>
+            </div>
+        </div>
+
+        <!-- Explore Menu Section -->
+        <div id="explore-menu" class="explore-menu">
+            <h1>Explore our menu</h1>
+            <p class="explore-menu-text">
+                Browse a different menu highlighting a flavorful cluster of dishes. Our central goal is to fulfill your desires and hoist your eating experience, each delightful dinner in turn.
+            </p>
+            <section id="menu">
+                <!-- <h2>Menu</h2> -->
+                <div class="food-item">
+                    <img src="/src/images/food_15.png" alt="">
+                    <h3>Sandwich</h3>
+                    <p>$12.99</p>
+                    <button onclick="addToCart('Sandwich', 12.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="/src/images/food_31.png" alt="">
+                    <h3>Noodels</h3>
+                    <p>$8.99</p>
+                    <button onclick="addToCart('Noodels', 8.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="/src/images/food_4.png" alt="">
+                    <h3>Veg Salad</h3>
+                    <p>$10.99</p>
+                    <button onclick="addToCart('Veg Salad', 10.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="/src/images/food_25.png" alt="">
+                    <h3>Cheesy Pasta</h3>
+                    <p>$20.99</p>
+                    <button onclick="addToCart('Cheesy Pasta', 20.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="/src/images/food_7.png" alt="">
+                    <h3>Veg Wraps</h3>
+                    <p>$5.99</p>
+                    <button onclick="addToCart('Veg Wraps', 5.99)">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="/src/images/food_28.png" alt="">
+                    <h3>Italian Pasta</h3>
+                    <p>$18.99</p>
+                    <button onclick="addToCart('Italian Pasta', 18.99)">Add to Cart</button>
+                </div>
+            </section>
+            <hr />
+        </div>
+
+        <!-- Food Display Section -->
+        <div id="food-display" class="food-display">
+            <!-- Food items will be dynamically inserted here -->
+        </div>
+
+        <!-- App Download Section -->
+        <div class="app-download">
+            <h2>Download Our App</h2>
+            <p>Get exclusive deals and faster service with our mobile app.</p>
+            <button id="download-button">Download Now</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <img src="/src/images/restaurant-logo.png" id="logo" alt="Logo" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio corporis quia quam laborum fuga error ipsa eveniet ipsum dolore ratione hic accusantium obcaecati quaerat culpa totam quibusdam, aliquid voluptatem cupiditate.</p>
+                <div class="footer-social-icons">
+                    <img src="/src/images/facebook_icon.png" alt="Facebook" />
+                    <img src="/src/images/twitter_icon.png" alt="Twitter" />
+                    <img src="/src/images/linkedin_icon.png" alt="LinkedIn" />
+                </div>
+            </div>
+            <div class="footer-content-center">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Delivery</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-content-right">
+                <h2>GET IN TOUCH</h2>
+                <ul>
+                    <li>+91-1234-5678</li>
+                    <li>contact@MyFoods.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <p class="footer-copyright">Copyright 2024 © MyFoods.com - All Rights Reserved.</p>
+    </div>
+
+    <!-- Include JavaScript files for Navbar, Explore Menu, and Home page -->
+    <script src="Navbar.js"></script>
+    <script src="ExploreMenu.js"></script>
+    <script src="Home.js"></script>
+    <script src="Cart.js"></script>
+</body>
+</html>

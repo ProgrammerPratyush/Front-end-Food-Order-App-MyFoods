@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="PlaceOrder.css">
+</head>
+<body>
+    <form id="place-order-form" class="place-order">
+        <div class="place-order-left">
+            <p class="title">Delivery Information</p>
+            <div class="multi-fields">
+                <input id="first-name" name="firstName" type="text" placeholder="First Name" required />
+                <input id="last-name" name="lastName" type="text" placeholder="Last Name" required />
+            </div>
+            <input id="email" name="email" type="email" placeholder="Email Address" required />
+            <input id="street" name="street" type="text" placeholder="Street" required />
+            <div class="multi-fields">
+                <input id="city" name="city" type="text" placeholder="City" required />
+                <input id="state" name="state" type="text" placeholder="State" required />
+            </div>
+            <div class="multi-fields">
+                <input id="zipcode" name="zipcode" type="text" placeholder="Zip code" required />
+                <input id="country" name="country" type="text" placeholder="Country" required />
+            </div>
+            <input id="phone" name="phone" type="text" placeholder="Phone" required />
+        </div>
+        <div class="place-order-right">
+            <div class="cart-total">
+                <h2>Cart Totals</h2>
+                <div>
+                    <div class="cart-total-details">
+                        <p>Subtotal</p>
+                        <p id="subtotal">$0.00</p>
+                    </div>
+                    <hr />
+                    <div class="cart-total-details">
+                        <p>Delivery Fee</p>
+                        <p id="delivery-fee">$2.00</p>
+                    </div>
+                    <hr />
+                    <div class="cart-total-details">
+                        <b>Total</b>
+                        <b id="total">$2.00</b>
+                    </div>
+                </div>
+                <button type="submit">PROCEED TO PAYMENT</button>
+            </div>
+        </div>
+    </form>
+    <script src="PlaceOrder.js"></script>
+</body>
+</html>

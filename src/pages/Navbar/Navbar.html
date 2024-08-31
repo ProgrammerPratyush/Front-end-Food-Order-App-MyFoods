@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/" id="logo-link"><img src="path/to/logo.png" alt="" class="logo" id="logo"/></a>
+        <ul class="navbar-menu">
+            <li><a href="/" class="menu-item active" data-menu="home">Home</a></li>
+            <li><a href="#explore-menu" class="menu-item" data-menu="menu">Menu</a></li>
+            <li><a href="#app-download" class="menu-item" data-menu="mobile-app">Mobile-App</a></li>
+            <li><a href="#footer" class="menu-item" data-menu="contact-us">Contact Us</a></li>
+        </ul>
+        
+        <div class="navbar-right">
+            <img src="path/to/search_icon.png" alt="" id="search-icon"/>
+            <div class="navbar-search-icon">
+                <a href="/cart"><img src="path/to/basket_icon.png" alt="" id="basket-icon"/></a>
+                <div id="cart-dot" class="dot"></div>
+            </div>
+            <button id="sign-in-button">Sign in</button>
+            <div class="navbar-profile" id="profile-section" style="display: none;">
+                <img src="path/to/profile_icon.png" alt="" id="profile-icon"/>
+                <ul class="nav-profile-dropdown" id="profile-dropdown">
+                    <li><a href="/myorders"><img src="path/to/bag_icon.png" alt="" id="bag-icon"/><p>Orders</p></a></li>
+                    <hr />
+                    <li id="logout"><img src="path/to/logout_icon.png" alt="" id="logout-icon"/><p>Logout</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Navbar.js"></script>
+</body>
+</html>

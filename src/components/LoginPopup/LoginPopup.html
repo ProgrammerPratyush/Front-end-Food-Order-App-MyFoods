@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Login Popup</title>
+    <link rel="stylesheet" href="LoginPopup.css">
+</head>
+
+<body>
+
+    <div class="login-popup" id="login-popup">
+        <form id="login-form" class="login-popup-container">
+            <div class="login-popup-title">
+                <h2 id="popup-title">Sign-Up</h2>
+                <img id="close-popup" src="/src/images/cross_icon.png" alt="Close">
+            </div>
+            <div class="login-popup-inputs">
+                <input id="name-input" name="name" type="text" placeholder="Your Name" required>
+                <input id="email-input" name="email" type="email" placeholder="Your Email" required>
+                <input id="password-input" name="password" type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" id="submit-button">Create Account</button>
+            <div class="login-popup-condition">
+                <input type="checkbox" required>
+                <p>By continuing, I agree to the terms of use & privacy policy.</p>
+            </div>
+            <p id="toggle-state">Already have an account? <span id="toggle-link">Login here</span></p>
+        </form>
+    </div>
+
+    <script src="LoginPopup.js"></script>
+</body>
+
+</html>

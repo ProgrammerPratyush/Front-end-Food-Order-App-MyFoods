@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="../Header/Header.css"> <!-- Adjust paths as necessary -->
+    <link rel="stylesheet" href="../Footer.css"> <!-- Adjust paths as necessary -->
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="/index.html" id="logo-link"><img src="/src/images/restaurant-logo.png" alt="Logo" class="logo" id="logo"/></a>
+        <ul class="navbar-menu">
+            <li><a href="../Home/Home.html" class="menu-item active" data-menu="home">Home</a></li>
+            <li><a href="#explore-menu" class="menu-item" data-menu="menu">Menu</a></li>
+            <li><a href="#app-download" class="menu-item" data-menu="mobile-app">Mobile-App</a></li>
+            <li><a href="#footer" class="menu-item" data-menu="contact-us">Contact Us</a></li>
+        </ul>
+        
+        <div class="navbar-right">
+            <img src="/src/images/search_icon.png" alt="Search" id="search-icon"/>
+            <div class="navbar-search-icon">
+                <a href="../Cart/Cart.html"><img src="/src/images/basket_icon.png" alt="Cart" id="basket-icon"/></a>
+                <div id="cart-dot" class="dot"></div>
+            </div>
+            <button id="sign-in-button" onclick="window.location.href='/src/components/LoginPopup/LoginPopup.html'">Sign in</button>
+            <div class="navbar-profile" id="profile-section" style="display: none;">
+                <img src="/src/images/profile_icon.png" alt="Profile" id="profile-icon"/>
+                <ul class="nav-profile-dropdown" id="profile-dropdown">
+                    <li><a href="/myorders"><img src="/src/images/bag_icon.png" alt="Orders" id="bag-icon"/><p>Orders</p></a></li>
+                    <hr />
+                    <li id="logout"><img src="/src/images/logout_icon.png" alt="Logout" id="logout-icon"/><p>Logout</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+        <div class="cart">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart-items">
+                <div class="cart-items-title">
+                    <p>Item</p>
+                    <p>Price</p>
+                    <p>Quantity</p>
+                    <p>Total</p>
+                    <p>Remove</p>
+                </div>
+                <hr>
+                <!-- Cart items will be dynamically inserted here -->
+                <div id="cart-items-container"></div>
+            </div>
+            <div class="cart-bottom">
+                <div class="cart-total">
+                    <h2>Cart Totals</h2>
+                    <div>
+                        <div class="cart-total-details">
+                            <p>Subtotal</p>
+                            <p id="subtotal">$0</p>
+                        </div>
+                        <hr>
+                        <div class="cart-total-details">
+                            <p>Delivery Fee</p>
+                            <p id="delivery-fee">$0</p>
+                        </div>
+                        <hr>
+                        <div class="cart-total-details">
+                            <b>Total</b>
+                            <b id="total">$0</b>
+                        </div>
+                    </div>
+                    <button id="checkout-button">PROCEED TO CHECKOUT</button>
+                </div>
+                <div class="cart-promocode">
+                    <div>
+                        <p>If you have a promo code, enter it here</p>
+                        <div class="cart-promocode-input">
+                            <input type="text" id="promo-code-input" placeholder="Promo-code">
+                            <button id="promo-submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <!-- <img src="/src/images/restaurant-logo.png" id="logo" alt="Logo" /> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio corporis quia quam laborum fuga error ipsa eveniet ipsum dolore ratione hic accusantium obcaecati quaerat culpa totam quibusdam, aliquid voluptatem cupiditate.</p>
+                <div class="footer-social-icons">
+                    <img src="/src/images/facebook_icon.png" alt="Facebook" />
+                    <img src="/src/images/twitter_icon.png" alt="Twitter" />
+                    <img src="/src/images/linkedin_icon.png" alt="LinkedIn" />
+                </div>
+            </div>
+            <div class="footer-content-center">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Delivery</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-content-right">
+                <h2>GET IN TOUCH</h2>
+                <ul>
+                    <li>+91-1234-5678</li>
+                    <li>contact@MyFoods.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <p class="footer-copyright">Copyright 2024 © MyFoods.com - All Rights Reserved.</p>
+    </div>
+
+    <!-- Include JavaScript files -->
+    <script src="../Cart/Cart.js"></script> <!-- Adjust path as necessary -->
+</body>
+</html>
